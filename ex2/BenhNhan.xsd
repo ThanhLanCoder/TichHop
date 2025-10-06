@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tempuri.org/BenhNhan.xsd"
+    xmlns:mstns="http://tempuri.org/BenhNhan.xsd"
+    elementFormDefault="qualified">
+    
+    <xs:complexType name="BNType">
+        <xs:sequence>
+            <xs:element name="HoTen">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:minLength value="2"></xs:minLength>
+                        <xs:maxLength value="50"></xs:maxLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NgayNhapVien">
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                        <xs:minExclusive value="2004-01-01"></xs:minExclusive>
+                        <xs:maxExclusive value="2025-10-01"></xs:maxExclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SoNgayDieuTri">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:fractionDigits value="1"></xs:fractionDigits>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="SoTien">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:fractionDigits value="2"></xs:fractionDigits>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="MaBenhNhan" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:pattern value="[a-zA-Z0-9]{5}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    
+    <xs:complexType name="KhoaType">
+        <xs:sequence>
+            <xs:element name="TenKhoa">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Noi"></xs:enumeration>
+                        <xs:enumeration value="Ngoai"></xs:enumeration>
+                        <xs:enumeration value="Cap Cuu"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Phong" type="xs:int"></xs:element>
+            <xs:element name="BenhNhan" type="mstns:BNType"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="BVType">
+        <xs:sequence>
+            <xs:element name="Khoa" type="mstns:KhoaType" minOccurs="0" maxOccurs="unbounded"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BV" type="mstns:BVType"></xs:element>
+    
+</xs:schema>

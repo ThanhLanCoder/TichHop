@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tempuri.org/student.xsd"
+    xmlns:mstns="http://tempuri.org/student.xsd"
+    elementFormDefault="qualified">
+    
+    
+    
+    <xs:complexType name="SVType">
+        <xs:sequence>
+            <xs:element name="HoTen" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"></xs:maxLength>
+                        <xs:minLength value="2"></xs:minLength>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="GioiTinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nam"></xs:enumeration>
+                        <xs:enumeration value="Nu"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="TrinhDo">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"> 
+                        <xs:enumeration value="Dai Hoc"></xs:enumeration>
+                        <xs:enumeration value="Cao Dang"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="NgaySinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                        <xs:minExclusive value="1995-01-01"></xs:minExclusive>
+                        <xs:maxExclusive value="2005-01-01"></xs:maxExclusive>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="Diem">
+                <xs:simpleType>
+                    <xs:restriction base="xs:decimal">
+                        <xs:fractionDigits value="2"></xs:fractionDigits>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="XepLoai">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Gioi"></xs:enumeration>
+                        <xs:enumeration value="Kha"></xs:enumeration>
+                        <xs:enumeration value="Trung Binh"></xs:enumeration>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="masv" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="[0-9a-zA-Z]{10}"></xs:pattern>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+   <xs:complexType name="SinhVienType">
+    <xs:sequence>
+        <xs:element name="SinhVien" type="mstns:SVType" 
+                    minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="QLSV" type="mstns:SinhVienType"/>
+</xs:schema> 

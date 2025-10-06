@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="student.xslt"?>
+<QLSV xmlns="http://tempuri.org/student.xsd">
+    <SinhVien masv="1234567890">
+        <HoTen>Nguyen Thi A</HoTen>
+        <GioiTinh>Nu</GioiTinh>
+        <TrinhDo>Dai Hoc</TrinhDo>
+        <NgaySinh>2004-01-01</NgaySinh>
+        <Diem>8.65</Diem>
+    </SinhVien>
+    <SinhVien masv="1234567891">
+        <HoTen>Nguyen Van A</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <TrinhDo>Dai Hoc</TrinhDo>
+        <NgaySinh>2004-01-01</NgaySinh>
+        <Diem>5.65</Diem>
+    </SinhVien>
+    <SinhVien masv="1234567891">
+        <HoTen>Nguyen Van B</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <TrinhDo>Dai Hoc</TrinhDo>
+        <NgaySinh>2004-01-01</NgaySinh>
+        <Diem>8.65</Diem>
+    </SinhVien>
+    <SinhVien masv="1234567891">
+        <HoTen>Nguyen Van B</HoTen>
+        <GioiTinh>Nam</GioiTinh>
+        <TrinhDo>Dai Hoc</TrinhDo>
+        <NgaySinh>2004-01-01</NgaySinh>
+        <Diem>7.65</Diem>
+    </SinhVien>
+</QLSV>
