@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="nhanvien.xslt" type="text/xsl"?>
+<QLNV xmlns="http://tempuri.org/nhanvien.xsd">
+    <nhanvien manv="nv01">
+        <hoten>Nguyen Van A</hoten>
+        <sdt>0123456789</sdt>
+        <diachi>Ha Noi</diachi>
+        <ngaysinh>2004-01-03</ngaysinh>
+        <gioitinh>Nam</gioitinh>
+    </nhanvien>
+    <nhanvien manv="nv02">
+        <hoten>Nguyen Van B</hoten>
+        <sdt>0123456789</sdt>
+        <diachi>Ha Noi</diachi>
+        <ngaysinh>2004-01-03</ngaysinh>
+        <gioitinh>Nam</gioitinh>
+    </nhanvien>
+    <nhanvien manv="nv03">
+        <hoten>Nguyen Thi A</hoten>
+        <sdt>0123456789</sdt>
+        <diachi>Ha Noi</diachi>
+        <ngaysinh>2004-01-04</ngaysinh>
+        <gioitinh>Nu</gioitinh>
+    </nhanvien>
+    <nhanvien manv="nv04">
+        <hoten>Nguyen Van C</hoten>
+        <sdt>0123456789</sdt>
+        <diachi>Ha Noi</diachi>
+        <ngaysinh>2004-01-05</ngaysinh>
+        <gioitinh>Nam</gioitinh>
+    </nhanvien>
+</QLNV>

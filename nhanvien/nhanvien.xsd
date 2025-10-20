@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="http://tempuri.org/nhanvien.xsd"
+    xmlns:mstns = "http://tempuri.org/nhanvien.xsd"
+    elementFormDefault="qualified">
+    
+    <xs:complexType name="nvtype" >
+        <xs:sequence>
+            <xs:element name="hoten">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:maxLength value="50"/>
+                        <xs:minLength value="2"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="sdt">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:pattern value="[0-9]{10}"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="diachi" type="xs:string"></xs:element>
+            <xs:element name="ngaysinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:date">
+                        <xs:maxExclusive value="2025-01-01"/>
+                        <xs:minExclusive value="2004-01-01"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="gioitinh">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="Nam"/>
+                        <xs:enumeration value="Nu"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute name="manv" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:ID">
+                    <xs:maxLength value="4"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="nhanvientype">
+        <xs:sequence>
+            <xs:element name="nhanvien" type="mstns:nvtype" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="QLNV" type="mstns:nhanvientype"></xs:element>
+    
+</xs:schema>

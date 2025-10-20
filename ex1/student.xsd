@@ -5,8 +5,6 @@
     xmlns:mstns="http://tempuri.org/student.xsd"
     elementFormDefault="qualified">
     
-    
-    
     <xs:complexType name="SVType">
         <xs:sequence>
             <xs:element name="HoTen" >
