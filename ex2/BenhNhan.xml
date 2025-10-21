@@ -1,31 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet href="BenhNhan.xslt" type="text/xsl"?>
 <BV xmlns="http://tempuri.org/BenhNhan.xsd">
-    <Khoa>
+    <Khoa MaKhoa="K01">
         <TenKhoa>Noi</TenKhoa>
         <Phong>301</Phong>
         <BenhNhan MaBenhNhan="BN001">
             <HoTen>Nguyen Van A</HoTen>
             <NgayNhapVien>2025-01-01</NgayNhapVien>
             <SoNgayDieuTri>3</SoNgayDieuTri>
+            <SoTien>1500000</SoTien>
+        </BenhNhan>
+        <BenhNhan MaBenhNhan="BN002">
+            <HoTen>Tran Thi B</HoTen>
+            <NgayNhapVien>2025-02-01</NgayNhapVien>
+            <SoNgayDieuTri>2</SoNgayDieuTri>
+            <SoTien>1000000</SoTien>
         </BenhNhan>
     </Khoa>
-    <Khoa>
+    <Khoa MaKhoa="K02">
         <TenKhoa>Ngoai</TenKhoa>
         <Phong>401</Phong>
-        <BenhNhan MaBenhNhan="BN002">
-            <HoTen>Nguyen Van A</HoTen>
-            <NgayNhapVien>2025-01-01</NgayNhapVien>
-            <SoNgayDieuTri>3</SoNgayDieuTri>
-        </BenhNhan>
-    </Khoa>
-    <Khoa>
-        <TenKhoa>Cap Cuu</TenKhoa>
-        <Phong>203</Phong>
         <BenhNhan MaBenhNhan="BN003">
-            <HoTen>Nguyen Van A</HoTen>
-            <NgayNhapVien>2025-01-01</NgayNhapVien>
-            <SoNgayDieuTri>3</SoNgayDieuTri>
+            <HoTen>Le Van C</HoTen>
+            <NgayNhapVien>2025-03-10</NgayNhapVien>
+            <SoNgayDieuTri>4</SoNgayDieuTri>
+            <SoTien>2000000</SoTien>
+        </BenhNhan>
+        <BenhNhan MaBenhNhan="BN004">
+            <HoTen>Le Van D</HoTen>
+            <NgayNhapVien>2025-03-10</NgayNhapVien>
+            <SoNgayDieuTri>4</SoNgayDieuTri>
+            <SoTien>2000000</SoTien>
         </BenhNhan>
     </Khoa>
 </BV>
